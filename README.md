@@ -1,7 +1,7 @@
 
 # React + TypeScript + Vite
 
-A boilerplate/starter project for quickly building RESTful APIs using Node.js,Typescript, Express, and Sequelize.
+A react and typescript web application to create company users and upload employees through excel
 
 
 - React 
