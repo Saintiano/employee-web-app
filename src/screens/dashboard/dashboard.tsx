@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Menu_List_Items from '../../components/menu_list_items';
 import NavBar from '../../components/nav_bar';
 import { menuListItems } from '../../types/menu_list_Items';
+import FileInput from '../upload_excel_file/upload_excel_file';
 
 function Dashboard() {
 
@@ -26,7 +27,7 @@ function Dashboard() {
 
                 <Menu_List_Items properties={{
                     onClick(index, value) {
-                        console.log(index, value);
+                        // console.log(index, value);
                         setListIndex(index);
                     },
                     menu: menuListItems
@@ -44,8 +45,8 @@ function Dashboard() {
                 listIndex === 1 ?
                     <div className="p-6 bg-gray-50 text-medium text-gray-500 dark:text-gray-400 dark:bg-gray-800  w-full">
                         <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Employee Tab</h3>
-                        <p className="mb-2">This is some placeholder content the Profile tab's associated content, clicking another tab will toggle the visibility of this one for the next.</p>
-                        <p>The tab JavaScript swaps classes to control the content visibility and styling.</p> 
+                        <p className="mb-4">Kindly, upload the excel sheets containing your employees detail</p>
+                        <FileInput/>
                     </div>:
                 listIndex === 2 ?
                     <div className="p-6 bg-gray-50 text-medium text-gray-500 dark:text-gray-400 dark:bg-gray-800  w-full">

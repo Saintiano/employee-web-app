@@ -1,7 +1,16 @@
 
 # React + TypeScript + Vite
 
-A react and typescript web application to create company users and upload employees through excel
+A react and typescript web application to create company users and upload employees through excel.
+
+Create an account, then sign in and select the employee tab on the dashboard.
+Upload the excel sheet in the root folder or 
+
+Create an excel with these columns
+
+- Name	Skills	Status	Date	Location	Rate	Image
+
+Populate the details and upload
 
 
 - React 

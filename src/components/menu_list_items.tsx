@@ -12,7 +12,7 @@ function Menu_List_Items( {properties} : MenuListItemsProps) {
     useEffect(() => {
 
         // setListIndex([...listIndex]);
-        console.log(`listIndex ${listIndex}`);
+        // console.log(`listIndex ${listIndex}`);
 
     }, [listIndex]);
     
