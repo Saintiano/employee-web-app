@@ -3,12 +3,12 @@
 export class User {
 
     constructor(
-        private id: number,
-        private CompanyName: string,
-        private email: string,
-        private password: string,
-        private companySize: string,
-        private acceptedTerms: number
+        public id: number,
+        public CompanyName: string,
+        public email: string,
+        public password: string,
+        public companySize: string,
+        public acceptedTerms: boolean
     ) {}
 
     getCompanyName(): string {
@@ -27,7 +27,7 @@ export class User {
         return this.companySize;
     }
 
-    getAcceptedTerms(): number {
+    getAcceptedTerms(): boolean {
         return this.acceptedTerms;
     }
 
@@ -47,9 +47,13 @@ export class User {
         this.companySize = companySize;
     }
 
-    setAcceptedTerms(acceptedTerms: number): void {
+    setAcceptedTerms(acceptedTerms: boolean): void {
         this.acceptedTerms = acceptedTerms;
     }
 
 
 }
+
+let users : User[] = [];
+
+export default users;

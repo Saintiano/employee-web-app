@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { User } from "../types/user_data";
 
 function useLogin() {
 
@@ -13,7 +14,27 @@ function useLogin() {
     const navigate = useNavigate();
 
     const login = () => {
+
         setIsLogin(true);
+
+        const users : User[] = JSON.parse(localStorage.getItem("users") || "[]");
+
+        users.length === 0 ? 
+
+        alert("No user found") :
+        users.map((user : User) => {
+
+            if(user.email === email && user.password === password){
+
+                navigate("/dashboard");
+
+            }else{
+
+                alert("User login details not found");
+
+            }
+
+        });
     };
 
     const logout = () => {
@@ -62,9 +83,11 @@ function useLogin() {
      
     let handleSubmitData = (event : any) => {
         event.preventDefault()
-        navigate("/dashboard");
-        
-        navigate("/dashboard");
+
+        if(email !== "" && password !== ""){
+            login();
+        }
+
 
         // event.persist();
   
@@ -72,18 +95,18 @@ function useLogin() {
 
     console.log("errors : ", errorsEmail, errorsPassword);
 
-  return {
-    handleSubmitData,
-    isLogin,
-    login,
-    logout,
-    handleUserEmail,
-    handleUserPassword,
-    email,
-    password,
-    errorsEmail,
-    errorsPassword
-  };
+    return {
+        handleSubmitData,
+        isLogin,
+        login,
+        logout,
+        handleUserEmail,
+        handleUserPassword,
+        email,
+        password,
+        errorsEmail,
+        errorsPassword
+    };
 }
 
 export default useLogin;

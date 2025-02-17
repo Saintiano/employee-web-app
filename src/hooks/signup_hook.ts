@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { User } from "../types/user_data";
+import users, { User } from "../types/user_data";
 
 function useSignUp() {
 
@@ -8,7 +8,7 @@ function useSignUp() {
     const [email, setEmail] = useState<string>('');
     const [companyName, setCompanyName] = useState<string>('');
     const [companySize, setComapnySize] = useState<string>('');
-    const [acceptedTerms, setAcceptedTerms] = useState<number>(0);
+    const [acceptedTerms, setAcceptedTerms] = useState<boolean>(false);
 
     const [errorsEmail, setErrorsEmail] = useState<string>("");
     const [errorsPassword, setErrorsPassword] = useState<string>("");
@@ -55,7 +55,7 @@ function useSignUp() {
 
     const handleTermsAndCondition= (event: React.ChangeEvent<HTMLInputElement>) => {
         
-        setAcceptedTerms(Number(event.target.value));
+        setAcceptedTerms(event.target.checked);
         handleErrors("password");
         handleErrors("email");
     };
@@ -83,13 +83,26 @@ function useSignUp() {
 
      
     let handleSubmitData = (event : any) => {
+
         event.preventDefault()
         console.log("Form Submitted : ", `email : ${email} password : ${password} company name : ${companyName} company size : ${companySize} accepted terms : ${acceptedTerms}`);
+
+        localStorage.clear;
+
+        if (email.length !== 0 && password.length !== 0 && companyName.length !== 0 && companySize.length !== 0 && acceptedTerms) {
+            
+            const user = new User( new Date().getTime(), companyName, email, password, companySize, acceptedTerms);
+
+            users.push(user);
+
+            console.log("User : ", user);
+
+            localStorage.setItem("users", JSON.stringify(users));
+
+            alert(`"User Created Successfully"`);
+
+        }
         
-        const user = new User(1, companyName, email, password, companySize, acceptedTerms);
-
-        console.log("User : ", user);
-
         // event.persist();
   
     }
