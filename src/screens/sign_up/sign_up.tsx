@@ -6,15 +6,10 @@ const SignUp : React.FC = () => {
 
     const { 
       handleSubmitData,
-      isLogin,
-      login,
-      logout,
       handleUserEmail,
       handleUserPassword,
       email,
       password,
-      errorsEmail,
-      errorsPassword,
       companyName,
       companySize,
       acceptedTerms,

@@ -1,4 +1,3 @@
-import { ArrowRight, Camera, CircleHelp, Globe, Zap } from 'lucide-react';// Replace 'your-icon-library' with the actual library name
 
 interface ListItems {
     name: string,

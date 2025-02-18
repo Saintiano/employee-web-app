@@ -1,4 +1,4 @@
-import { ArrowRight, Camera, CircleHelp, Globe, Zap } from 'lucide-react';
+import { ArrowRight, CircleHelp, Globe, Zap } from 'lucide-react';
 import NavBar from '../../components/nav_bar';
 import Section from '../../components/section';
 import Intro_Header from '../../components/intro_header';

@@ -20,6 +20,8 @@ function Menu_List_Items( {properties} : MenuListItemsProps) {
 
         if(listIndex.includes(index)){
 
+            console.log("index is already in the list" + event.target);
+
         }else{
             listIndex.length = 0;
             setListIndex([...listIndex, index]);

@@ -1,4 +1,4 @@
-import { Globe } from "lucide-react";
+
 import Cards_Props_Type from "../types/cards_type";
 
 interface CardsTestimonialProps {

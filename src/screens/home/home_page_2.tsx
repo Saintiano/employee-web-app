@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpDown, Camera, CircleHelp, Clock, DollarSign, Globe, Link, Star, TimerIcon, Zap } from 'lucide-react';
+import { ArrowRight, ArrowUpDown,Clock, DollarSign, Star } from 'lucide-react';
 import NavBar from '../../components/nav_bar';
 import Section from '../../components/section';
 import Intro_Header from '../../components/intro_header';

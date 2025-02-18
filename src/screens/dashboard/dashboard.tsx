@@ -27,7 +27,7 @@ function Dashboard() {
 
                 <Menu_List_Items properties={{
                     onClick(index, value) {
-                        // console.log(index, value);
+                        console.log(index, value);
                         setListIndex(index);
                     },
                     menu: menuListItems
