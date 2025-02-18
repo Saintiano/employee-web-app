@@ -6,8 +6,9 @@ import Cards from '../../components/cards';
 import Cards_Image_Beside from '../../components/cards_image_beside';
 import Footer from '../../components/footer';
 import CardsTestimonial from '../../components/cards_testimonial';
+import React from "react";
 
-function Home_Page_Two() {
+const Home_Page_Two: React.FC = () =>  {
     return (
         <div className=' h-screen bg-gradient-to-tr bg-gradient-to-tr from-gray-20 via-slate-50 to-slate-200'>
             <NavBar 

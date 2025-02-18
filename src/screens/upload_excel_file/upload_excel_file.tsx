@@ -4,7 +4,7 @@ import React from 'react';
 import * as XLSX from 'xlsx';
 import Employees from '../../types/employee_types';
 
-function FileInput() {
+const FileInput: React.FC = () =>   {
 
   const [data, setData] = React.useState<Employees[] | [] | any>([]);
 

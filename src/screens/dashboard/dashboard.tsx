@@ -3,8 +3,9 @@ import Menu_List_Items from '../../components/menu_list_items';
 import NavBar from '../../components/nav_bar';
 import { menuListItems } from '../../types/menu_list_Items';
 import FileInput from '../upload_excel_file/upload_excel_file';
+import React from "react";
 
-function Dashboard() {
+const Dashboard: React.FC = () => {
 
     const [listIndex, setListIndex] = useState<number>(0);
 

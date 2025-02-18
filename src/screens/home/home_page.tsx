@@ -5,8 +5,9 @@ import Intro_Header from '../../components/intro_header';
 import Cards from '../../components/cards';
 import Footer from '../../components/footer';
 import { Link } from 'react-router-dom';
+import React from "react";
 
-function Home_Page() {
+const Home_Page: React.FC = () => {
     return (
         <div className=' h-screen bg-gradient-to-tr bg-gradient-to-tr from-gray-20 via-slate-50 to-slate-200'>
             <NavBar 

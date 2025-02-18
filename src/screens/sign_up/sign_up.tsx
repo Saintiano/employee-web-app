@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Nav_Bar from "../../components/nav_bar";
 import useSignUp from "../../hooks/signup_hook";
+import React from "react";
 
 const SignUp : React.FC = () => {
 
